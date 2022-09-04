@@ -5,6 +5,9 @@ export interface DiaryEntry {
   date: string,
   weather: Weather,
   visibility: Visibility,
-  comment: string
+  comment?: string
 
 }
+
+
+export type nonSentitiveDataEntry = Omit<DiaryEntry, 'comment'>;

@@ -1,14 +1,14 @@
 import express from 'express';
-
+import diaryService from '../services/dairyService';
 const router = express.Router();
 
 router.get('/', (_req, res) => {
-  res.send('fetching all diaries');
+  res.send(diaryService.getNonSentiveDataEntry());
 });
 
 
 router.post('/', (_req, res) => {
-  res.send('saving a diary');
+  res.send('hi');
 });
 
 
